@@ -10,21 +10,21 @@ import com.online_store1.online_store1.Service.AdminLoginService;
 @Service
 public class AdminLoginServiceImpl  implements AdminLoginService {
 	@Autowired
-	AdminLoginRepository AdminLoginRepository;
+	AdminLoginRepository adminLoginRepository;
 	
 	@Override
 	public String signup(AdminLogin AdminLogin) {
-		AdminLoginRepository.save(AdminLogin)	;
+		adminLoginRepository.save(AdminLogin)	;
 		return "Account has been created";
 		}
 
 	@Override
 	public String login(String email, String password) {
-		AdminLogin AdminLogin=com.online_store1.online_store1.Repositories.AdminLoginRepository.findbyemailid(email);
+		AdminLogin adminLogin=adminLoginRepository.findbyemailid(email);
 		
-		if(AdminLogin!=null)
+		if(adminLogin!=null)
 		{
-			if(AdminLogin.getPassword().equals(password))
+			if(adminLogin.getPassword().equals(password))
 		return "you are welcome";
 				
 				return "Invalid password";

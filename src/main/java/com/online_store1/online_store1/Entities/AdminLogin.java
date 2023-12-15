@@ -25,9 +25,9 @@ public class AdminLogin{
 	
 	private String email;
 	private String password;
-	public static Object getPassword() {
+	public String getPassword() {
 		// TODO Auto-generated method stub
-		return null;
+		return password;
 	}
 	public String getEmail() {
 		return email;

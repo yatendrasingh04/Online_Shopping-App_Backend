@@ -24,9 +24,9 @@ public class UserLogin {
 	
 	private String email;
 	private String password;
-	public Object getPassword() {
+	public String getPassword() {
 		// TODO Auto-generated method stub
-		return null;
+		return password;
 	}
 	public String getEmail() {
 		return email;
